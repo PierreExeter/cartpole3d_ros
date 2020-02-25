@@ -8,7 +8,6 @@ The RL algorithms are DQN, A2C, ACKTR, PPO, TRPO implemented in the library [sta
 1. Install [ROS Melodic](http://wiki.ros.org/ROS/Installation)
 
 2. Install the [openai_ros](http://wiki.ros.org/openai_ros) package.
-
 ```bash
 cd ~/catkin_make/src/
 git clone https://bitbucket.org/theconstructcore/openai_ros.git
@@ -19,7 +18,6 @@ rosdep install openai_ros
 ```
 
 3. Install Gym
-
 ```bash
 pip install gym
 ```
@@ -27,7 +25,6 @@ pip install gym
 4. Install [stable-baselines](https://github.com/hill-a/stable-baselines)
 
 5. Install cartpole3d
-
 ```bash
 cd ~/catkin_make/src/
 git clone https://github.com/PierreExeter/cartpole3d_ros.git
@@ -35,8 +32,7 @@ cd ~/catkin_make
 catkin_make
 ```
 
-6. Make scripts executable
-
+6. Make the scripts executable
 ```bash
 chmod +x ~/catkin_make/src/cartpole3d/scripts/cartpole3d_random.py
 chmod +x ~/catkin_make/src/cartpole3d/scripts/cartpole3d_dqn.py
@@ -64,7 +60,7 @@ You should see the cartpole executing random actions in Gazebo.
 
 ![alt text][cartpole]
 
-[cartpole]: https://github.com/PierreExeter/cartpole3d_ros/results/videos/cartpole.png "cartpole3d in Gazebo"
+[cartpole]: https://github.com/PierreExeter/cartpole3d_ros/tree/master/results/videos/cartpole.png "cartpole3d in Gazebo"
 
 ## Perform training
 ```bash
@@ -93,9 +89,9 @@ python plot_reward.py
 ## Supported systems
 Tested on:
  
-Ubuntu 18.04
-Python 2.7
-ROS Melodic
-Gazebo 9.12
+- Ubuntu 18.04
+- Python 2.7
+- ROS Melodic
+- Gazebo 9.12
 
 
