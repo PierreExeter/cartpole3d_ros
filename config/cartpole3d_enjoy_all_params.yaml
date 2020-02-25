@@ -38,4 +38,4 @@ cartpole_v0: #namespace
     wait_time: 0.1 # Time to wait in the reset phases
 
     task_and_robot_environment_name: 'CartPoleStayUp-v0'
-    ros_ws_abspath: '/home/pierre/simulation_ws'
+    ros_ws_abspath: '~/simulation_ws'

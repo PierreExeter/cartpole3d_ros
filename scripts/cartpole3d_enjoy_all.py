@@ -18,7 +18,7 @@ from openai_ros.task_envs.cartpole_stay_up import stay_up
 from openai_ros.openai_ros_common import StartOpenAI_ROS_Environment 
 
 
-os.chdir('/home/pierre/catkin_ws/src/openai_examples/cartpole/cartpole3d/scripts/')
+os.chdir('~/catkin_ws/src/openai_examples/cartpole/cartpole3d/scripts/')
 
 rospy.init_node('cartpole3d_trpo', anonymous=True, log_level=rospy.FATAL)
 
@@ -31,10 +31,10 @@ n_actions = env.action_space.n
 action_noise = NormalActionNoise(mean=np.zeros(n_actions), sigma=0.1 * np.ones(n_actions))
 
 model_list = [
-        A2C(MlpPolicy, env, verbose=1, tensorboard_log="tensorboard_logs/A2C/"), 
-        ACKTR(MlpPolicy, env, verbose=1, tensorboard_log="tensorboard_logs/ACKTR/"), 
-        PPO2(MlpPolicy, env, verbose=1, tensorboard_log="tensorboard_logs/PPO2/"), 
-        TRPO(MlpPolicy, env, verbose=1, tensorboard_log="tensorboard_logs/TRPO/"),
+        A2C(MlpPolicy, env, verbose=1, tensorboard_log="../results/tensorboard_logs/A2C/"), 
+        ACKTR(MlpPolicy, env, verbose=1, tensorboard_log="../results/tensorboard_logs/ACKTR/"), 
+        PPO2(MlpPolicy, env, verbose=1, tensorboard_log="../results/tensorboard_logs/PPO2/"), 
+        TRPO(MlpPolicy, env, verbose=1, tensorboard_log="../results/tensorboard_logs/TRPO/"),
 ]
 
 algo_list = ['A2C', 'ACKTR', 'PPO2', 'TRPO']
@@ -47,7 +47,7 @@ rate = rospy.Rate(30)
 
 for model, algo in zip(model_list, algo_list):
     print(algo)
-    model = model.load("trained_models/"+algo)
+    model = model.load("../results/trained_models/"+algo)
     obs = env.reset()
 
     for i in range(500):

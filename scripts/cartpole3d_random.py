@@ -4,7 +4,6 @@ import gym
 from openai_ros.task_envs.cartpole_stay_up import stay_up
 from openai_ros.openai_ros_common import StartOpenAI_ROS_Environment 
 
-
 rospy.init_node('cartpole3d_random', anonymous=True, log_level=rospy.INFO)
 environment_name = rospy.get_param('/cartpole_v0/task_and_robot_environment_name')
 env = StartOpenAI_ROS_Environment(environment_name)
