@@ -1,7 +1,7 @@
 # CartPole3d
 The Cart Pole problem is solved in 3D using Reinforcement Learning (RL).
 The cartpole3d environment is implemented in ROS with the package [openai_ros](http://wiki.ros.org/openai_ros).
-The RL algorithms are DQN, A2C, ACKTR, PPO, TRPO implemented in the library [stable-baselines](https://github.com/hill-a/stable-baselines).
+The RL algorithms used for training are DQN, A2C, ACKTR, PPO, TRPO implemented in the [stable-baselines](https://github.com/hill-a/stable-baselines) library.
 
 
 ## Installation
@@ -50,17 +50,11 @@ source devel/setup.bash
 rospack profile
 ```
 
-
-## Test your installation
+## Test the installation
 ```bash
 roslaunch cartpole3d start_training_cartpole3d_random.launch 
 ```
-
 You should see the cartpole executing random actions in Gazebo.
-
-<!--![alt text][cartpole]-->
-<!--[cartpole]: https://github.com/PierreExeter/cartpole3d_ros/tree/master/results/videos/cartpole.png "cartpole3d in Gazebo"-->
-
 ![cartpole](results/videos/cartpole.png)
 
 ## Perform training
@@ -80,15 +74,14 @@ tensorboard --logdir=A2C:tensorboard_logs/A2C/,ACKTR:tensorboard_logs/ACKTR/,PPO
 roslaunch cartpole3d start_training_cartpole3d_enjoy_all.launch 
 ```
 
-## Plot results
+## Plot the results
 ```bash
 cd ~/catkin_make/src/cartpole3d/scripts/
 python plot_reward.py
 ```
 
-
 ## Supported systems
-Tested on:
+Tested with:
  
 - Ubuntu 18.04
 - Python 2.7
