@@ -58,9 +58,10 @@ roslaunch cartpole3d start_training_cartpole3d_random.launch
 
 You should see the cartpole executing random actions in Gazebo.
 
-![alt text][cartpole]
+<!--![alt text][cartpole]-->
+<!--[cartpole]: https://github.com/PierreExeter/cartpole3d_ros/tree/master/results/videos/cartpole.png "cartpole3d in Gazebo"-->
 
-[cartpole]: https://github.com/PierreExeter/cartpole3d_ros/tree/master/results/videos/cartpole.png "cartpole3d in Gazebo"
+![cartpole](results/videos/cartpole.png)
 
 ## Perform training
 ```bash
